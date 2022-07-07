@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Nusantara | Home Page</title>
+</head>
+<link rel="stylesheet" href="CSS/HRhome.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gantari:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <nav>
+    <div class="navigasi">
+        <div class="logo"><img src="images/logohotel.png" width="60" height="21" style="margin-left: -55px; margin-top: 15px; margin-right: 10px"></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="HotelReservation.html">Home</a></li>
+                    <li><a href="SpecialOffer.html">Special offer</a></li>
+                    <li><a href="Destination.html">Destinations</a></li>
+                    <li><a href="kontak.html">Events</a></li>
+                </ul>
+            </div>
+        </div>
+</nav>
+
+<div class="container">
+<div class="header">
+    <h1><img src="images/logohotel.png" width="220" height="131" style="margin-left: 15px; margin-top: 15px; margin-right: 10px"></h1>
+    <p><em>Your best choice to stay</em></p>
+  </div>
+</div>
+
+    <form name="form1" onsubmit="return booking();">
+        <fieldset>
+            <legend>Fill out this form</legend>
+            <label class="form-label" for="nama">Name</label>
+            <input class="form-input" type="text" id="nama" name="nama" placeholder="Enter Your Name" required />
+            <label class="form-label" for="tanggal">Date of Bookings</label>
+            <input class="form-input" type="date" id="tanggal" name="tanggal" onchange="cektanggal()" required />
+            <label class="form-label" for="roomtype">Select Room Type</label>
+            <div class="form-radio">
+                <input type="radio" id="roomtype" name="roomtype" value="Twin" onclick="hitung()" checked />
+                <label for="roomtype">Twin</label>
+                <input type="radio" id="roomtype" name="roomtype" value="Suite" onclick="hitung()"/>
+                <label for="roomtype">Suite</label>
+                <input type="radio" id="roomtype" name="roomtype" value="Executive" onclick="hitung()" />
+                <label for="roomtype">Executive</label>
+            </div>
+            <label class="form-label" for="harga">Price</label>
+            <input class="form-input" type="text" id="harga" name="harga" value="100000" disabled />
+            <label class="form-label" for="jumlah">Number of Nights</label>
+            <input class="form-input" type="number" min="0" id="jumlah" name="jumlah" placeholder="Enter Nights" onchange="hitung()" required />
+            <label class="form-label" for="total">Total Price</label>
+            <input class="form-input" type="text" id="total" name="total" disabled />  
+            <input class="form-button" id="submit" type="submit" />
+        </div>
+        </fieldset>
+    </form>
+    
+
+<script src="ScriptHotel.js"></script>
+
+
+
+
+                                
